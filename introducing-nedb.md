@@ -16,6 +16,9 @@ NeDB implements the most widely used features of MongoDB:
 * Documents modifiers $set, $inc, $push, $pop, $addToSet and $each
 
 
+[CODE SAMPLE HERE]
+
+
 #### Performance
 Of course, NeDB is not a replacement for MongoDB, so it's goal is not to be as fast as possible, it is to be fast enough. And it is: using indexing, it achieves about 5,000 writes and 25,000 reads per second.
 
