@@ -4,8 +4,20 @@ Sometimes you need database functionality but want to avoid the constraints that
 
 NeDB is a lightweight database written entirely in Javascript, and that implements the well-known and loved MongoDB API. It is packaged as a Node module that be used with a simple `require`. You can use it as an in-memory only or persistent datastore.
 
+```javascript
+var Nedb = require('nedb')
+  , planets = new Nedb({ filename: 'path/to/data.db', autoload: true });
 
-[IMAGE ON JEFF ATWOOD'S LAW HERE]  
+planets.insert({ name: 'Earth', satellites: 1 }, function (err) {
+  planets.insert({ name: 'Mars', satellites: 2 }, function (err) {
+    planets.insert({ name: 'Jupiter', satellites: 67 }, function (err) {
+      planets.find({ satellites: { $lt: 10 } }, function (err, docs) {
+        // docs is an array containing Earth and Mars
+      });
+    });
+  });
+});
+```
 
 
 #### Features
@@ -16,15 +28,12 @@ NeDB implements the most widely used features of MongoDB:
 * Documents modifiers $set, $inc, $push, $pop, $addToSet and $each
 
 
-[CODE SAMPLE HERE]
-
-
 #### Performance
-Of course, NeDB is not a replacement for MongoDB, so it's goal is not to be as fast as possible, it is to be fast enough. And it is: using indexing, it achieves about 5,000 writes and 25,000 reads per second.
+Of course, NeDB is not a replacement for a "real" database such as MongoDB, so its goal is not to be as fast as possible, it is to be fast enough. And it is: using indexing, it achieves about 5,000 writes and 25,000 reads per second. If you need more than this, you're probably not writing a small application!
 
 
 #### Want to try it?
-You can `npm install` it, the module name is `nedb`. You can also check the <a href="https://github.com/louischatriot/nedb">Github repository</a> to give feedback, raise issues or send pull requests
+You can `npm install` it, the module name is `nedb`. You can also check the <a href="https://github.com/louischatriot/nedb">Github repository</a> to read the documentation, give feedback, raise issues or send pull requests
 
 
 
