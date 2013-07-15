@@ -1,6 +1,6 @@
 # NeDB: a lightweight Javascript database using MongoDB's API
 
-Sometimes you need database functionality but want to avoid the constraints that come with installing a full-blown solution. Maybe you're writing a desktop application with Node Webkit, and don't want to ask your users to install MongoDB. Maybe you are writing a Node service or web application that needs to be easily packageable, for example a <a href="https://github.com/louischatriot/braindead-ci" target="_blank">continuous integration server</a>. Or maybe you just want to build a prototype quickly. That's when you need <a href="https://github.com/louischatriot/nedb">NeDB</a>.
+Sometimes you need database functionality but want to avoid the constraints that come with installing a full-blown solution. Maybe you are writing a Node service or web application that needs to be easily packageable, such as a <a href="https://github.com/louischatriot/braindead-ci" target="_blank">continuous integration server</a>. Maybe you're writing a desktop application with Node Webkit, and don't want to ask your users to install an external database. That's when you need <a href="https://github.com/louischatriot/nedb">NeDB</a>.
 
 NeDB is a lightweight database written entirely in Javascript, and that implements the well-known and loved MongoDB API. It is packaged as a Node module that be used with a simple `require`. You can use it as an in-memory only or persistent datastore.
 
@@ -29,6 +29,7 @@ NeDB implements the most widely used features of MongoDB:
 * Ability to persist data
 * Expressive query language where you can use dot notation (to query on nested documents), regular expressions, comparison operators ($lt, $lte, $gt, $gte, $in, $nin, $exists) and logical operators ($and, $or, $not)
 * Documents modifiers $set, $inc, $push, $pop, $addToSet and $each
+* A browser version
 
 
 #### Performance
