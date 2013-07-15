@@ -2,7 +2,7 @@
 
 Sometimes you need database functionality but want to avoid the constraints that come with installing a full-blown solution. Maybe you are writing a Node service or web application that needs to be easily packageable, such as a <a href="https://github.com/louischatriot/braindead-ci" target="_blank">continuous integration server</a>. Maybe you're writing a desktop application with Node Webkit, and don't want to ask your users to install an external database. That's when you need <a href="https://github.com/louischatriot/nedb">NeDB</a>.
 
-NeDB is a lightweight database written entirely in Javascript, and that implements the well-known and loved MongoDB API. It is packaged as a Node module that be used with a simple `require`. You can use it as an in-memory only or persistent datastore.
+**NeDB is a lightweight database written entirely in Javascript**, and that implements the well-known and loved MongoDB API. It is packaged as a Node module that be used with a simple `require` and can be used as an in-memory only or persistent datastore. **You can think of it as SQLite for MongoDB projects**.
 
 ```javascript
 var Nedb = require('nedb')
